@@ -1,0 +1,87 @@
+/*
+  MEDIA QUERIES
+  https://tailwindcss.com/docs/responsive-design
+*/
+@mixin respond-to($breakpoint) {
+  @if $breakpoint=="mobile" {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="tablet" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="desktop" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="wrapper" {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+//! Example usage
+/* @include respond-to('mobile') {} */
+
+
+/* CENTERING */
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//! Example usage
+/*
+.parent {
+  position: relative;
+}
+.child {
+  @include centered;
+}
+*/
+
+
+/* LINK HOVER TEXT DECORATION */
+@mixin linkHoverTextDecoration {
+  &:focus,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+//! Example usage
+/*
+.class {
+  @include linkHoverTextDecoration;
+}
+*/
+
+
+/* REM-CONVERTER MIXIN TO CONVERT PX TO REM */
+@mixin px-to-rem($pxValue, $property: "font-size", $standard-size: 16) {
+  #{$property}: $pxValue/$standard-size + rem;
+}
+
+//! Example usage
+/*
+.class {
+  @include px-to-rem(10);
+}
+*/

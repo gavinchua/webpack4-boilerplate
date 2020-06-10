@@ -1,0 +1,23 @@
+-
+  var menuItems = [
+    {"name":"Home", "url":"index.html"},
+    {"name":"About", "url":"about.html"}
+  ];
+
+header#header(class="")
+  div(class="container")
+    nav(class="relative flex items-center justify-between w-full py-3")
+      div(class="logo")
+        img(src="assets/images/logo.svg" width="180" alt="Logo" title="Logo")
+      div#btn-menu(class="pr-3 cursor-pointer lg:pr-0 lg:hidden btn-menu" title="Mobile Menu")
+        div
+      ul(class="items-center hidden text-sm lg:flex menu")
+        each menuItem in menuItems
+          li
+            a(href=menuItem.url class="block py-1 text-center lg:text-left lg:ml-2 xl:ml-4" title=menuItem.name)
+              = menuItem.name
+  ul#menu-mobile(class="box-border absolute z-10 w-full py-3 overflow-hidden text-sm lg:hidden menu menu--mobile")
+    each menuItem in menuItems
+      li
+        a(href=menuItem.url class="block py-1 text-center lg:text-left lg:ml-2 xl:ml-4" title=menuItem.name)
+          = menuItem.name
