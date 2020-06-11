@@ -11,6 +11,10 @@ module.exports = {
     container: {
       center: true,
       padding: '1.5rem'
+    },
+    fontFamily: {
+      display: ['sans-serif'],
+      body: ['sans-serif']
     }
   },
   variants: {},
