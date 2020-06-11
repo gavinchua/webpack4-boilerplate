@@ -41,8 +41,7 @@ module.exports = merge(baseConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env':{
-        'NODE_ENV': JSON.stringify('development'),
-        'PDF_FOLDER': JSON.stringify('/assets/pdf/')
+        'NODE_ENV': JSON.stringify('development')
       }
     }),
     new WebpackMessages({
