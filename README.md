@@ -2,7 +2,8 @@
 Webpack 4, pug, sass, tailwindcss & jquery
 
 ## TailwindCSS
-https://tailwindcss.com/docs/responsive-design/
+https://tailwindcss.com/docs/responsive-design/  
+https://blog.logrocket.com/10-tailwind-css-tips-to-boost-your-productivity/
 
 ## Dev
 http://localhost:9000/
