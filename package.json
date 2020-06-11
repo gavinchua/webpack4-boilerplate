@@ -60,6 +60,7 @@
     "stylelint-config-recommended": "3.0.0",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.17.2",
+    "tailwindcss-debug-screens": "^0.1.0",
     "terser-webpack-plugin": "^3.0.3",
     "url-loader": "^4.1.0",
     "webpack": "4.43.0",

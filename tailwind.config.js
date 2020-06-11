@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: {
     enabled: true,
     content: [
@@ -13,5 +14,7 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: []
+  plugins: [
+    require('tailwindcss-debug-screens')
+  ]
 };
