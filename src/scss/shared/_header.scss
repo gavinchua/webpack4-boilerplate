@@ -1,7 +1,4 @@
 header {
-  .container {
-    padding: 0;
-  }
   .logo {
     width: 180px;
     @include respond-to('desktop') {
