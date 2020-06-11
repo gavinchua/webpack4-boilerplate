@@ -1,5 +1,5 @@
-export class headerFN {
-  toggleMenu() {
+export class HeaderFN {
+  static toggleMenu() {
     const
       btnMenu = document.getElementById('btn-menu'),
       menu = document.getElementById('menu-mobile');

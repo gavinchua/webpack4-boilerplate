@@ -1,5 +1,5 @@
-export class homeFN {
-  myHome() {
+export class HomeFN {
+  static myHome() {
     console.log('This is my home.');
   }
 }

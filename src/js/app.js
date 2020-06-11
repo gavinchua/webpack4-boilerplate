@@ -5,8 +5,8 @@ import '../scss/app.scss';
 // window.jQuery = $;
 // window.$ = $;
 
-import { headerFN } from './shared/header';
-import { homeFN } from './components/home';
+import { HeaderFN } from './shared/header';
+import { HomeFN } from './components/home';
 
 (() => {
   ['orientationchange', 'resize'].forEach((e) => {
@@ -14,10 +14,10 @@ import { homeFN } from './components/home';
   });
 
   if (document.getElementById('btn-menu')) {
-    new headerFN().toggleMenu();
+    HeaderFN.toggleMenu();
   }
 
   if (document.getElementById('home')) {
-    new homeFN().myHome();
+    HomeFN.myHome();
   }
 })();
