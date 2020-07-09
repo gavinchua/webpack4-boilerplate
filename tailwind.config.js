@@ -8,6 +8,9 @@ module.exports = {
     ]
   },
   theme: {
+    colors: {
+      appDark: '#333740'
+    },
     container: {
       center: true,
       padding: '1.5rem'
