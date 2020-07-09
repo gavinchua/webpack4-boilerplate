@@ -8,6 +8,11 @@ import '../scss/app.scss';
 import { HeaderFN } from './shared/header';
 import { HomeFN } from './components/home';
 
+// for tailwindcss-debug-screens
+if (process.env.NODE_ENV !== 'production') {
+  document.body.classList.add('debug-screens');
+}
+
 (() => {
   if (document.getElementById('btn-menu')) {
     HeaderFN.toggleMenu();
