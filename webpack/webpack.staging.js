@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.common');
 const decorativeLines = require('./decorative-lines');
 const { randomBetween } = require('./utils');
@@ -9,6 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackMessages = require('webpack-messages');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
+// const PurgecssPlugin = require('purgecss-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -46,6 +47,9 @@ module.exports = merge(baseConfig, {
         'NODE_ENV': JSON.stringify('staging')
       }
     }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync(path.resolve(__dirname, '../src/**/*'), { nodir: true })
+    // }),
     new CompressionPlugin({
       algorithm: 'gzip'
     }),
