@@ -1,7 +1,7 @@
 module.exports = {
   important: true,
   purge: {
-    enabled: true,
+    enabled: process.env.NODE_ENV === 'production',
     content: [
       './src/pug/*.pug',
       './src/pug/**/*.pug'
