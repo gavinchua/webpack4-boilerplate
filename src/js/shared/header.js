@@ -1,8 +1,10 @@
 export class HeaderFN {
-  static toggleMenu() {
+  static toggleMobileMenu() {
     const
       btnMenu = document.getElementById('btn-menu'),
       menu = document.getElementById('menu-mobile');
+
+    menu.classList.remove('hidden');
 
     btnMenu.addEventListener('click', () => {
       btnMenu.classList.toggle('active');

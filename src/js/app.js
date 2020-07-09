@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 (() => {
   if (document.getElementById('btn-menu')) {
-    HeaderFN.toggleMenu();
+    HeaderFN.toggleMobileMenu();
   }
 
   if (document.getElementById('home')) {
