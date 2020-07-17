@@ -26,7 +26,7 @@ module.exports = {
   },
   output: {
     path: paths.dirDist,
-    filename: 'js/[name].js'
+    filename: 'js/[name].[hash].js'
   },
   stats: 'none',
   module: {
@@ -79,7 +79,7 @@ module.exports = {
       alwaysWriteToDisk: true
     })),
     new MiniCssExtractPlugin({
-      filename: 'css/app.css'
+      filename: 'css/app.[chunkhash].css'
     }),
     new CopyPlugin({
       patterns: [
