@@ -49,6 +49,11 @@ module.exports = merge(baseConfig, {
       }
     }),
     new ImageminPlugin({
+      svgo: {
+        plugins: [
+          { removeViewBox: false }
+        ]
+      },
       pngquant: {
         quality: '95-100'
       },
